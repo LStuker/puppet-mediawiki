@@ -56,7 +56,6 @@ class mediawiki (
   
   # Specify dependencies
   Class['mysql::server'] -> Class['mediawiki']
-  Class['mysql::config'] -> Class['mediawiki']
   
   class { 'apache': }
   class { 'apache::mod::php': }
